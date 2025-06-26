@@ -27,37 +27,163 @@ h1, h2, h3, h4, h5, h6, .nav-link, .btn {
   <div class="container mx-auto px-4 py-3 flex items-center justify-between">
 <a href="index.html" class="logo flex flex-col items-start">
   <img src="assets/Festcare - Insurance - Logo.png" alt="Festcare Insurance Logo" class="h-10 mb-1">
-  <span class="text-xs text-gray-600 uppercase tracking-wide">Member of Strathwall Group</span>
+  <span class="text-xs text-gray-600 uppercase tracking-wide">Member of Strathwell Group</span>
 </a>
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center space-x-8">
-      <a href="index.html" class="nav-link text-primary hover:text-primary font-medium">Home</a>
-      <a href="About-Festcare-Insurance-Agency.html" class="nav-link text-gray-800 hover:text-primary font-medium">About Us</a>
-      <a href="Comprehensive-Services-Overview.html" class="nav-link text-gray-800 hover:text-primary font-medium">Services</a>
-      <a href="FAQs.html" class="nav-link text-gray-800 hover:text-primary font-medium">FAQs/Updates</a>
-      <a href="Contact-Us.html" class="nav-link text-gray-800 hover:text-primary font-medium">Contact Us</a>
-    </nav>
-    <div class="hidden md:flex items-center space-x-4">
-      <a href="#" class="bg-primary text-white px-5 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition whitespace-nowrap">Get Covered</a>
-    </div>
-    <!-- Mobile Menu Button -->
-    <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
-      <i class="ri-menu-line ri-lg"></i>
-    </button>
-  </div>
-  <!-- Mobile Navigation -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-    <div class="container mx-auto px-4 py-3">
-      <a href="index.html" class="block py-2 text-gray-800 hover:text-primary font-medium">Home</a>
-      <a href="About-Festcare-Insurance-Agency.html" class="block py-2 text-gray-800 hover:text-primary font-medium">About Us</a>
-      <a href="Comprehensive-Services-Overview.html" class="block py-2 text-gray-800 hover:text-primary font-medium">Services</a>
-      <a href="FAQs.html" class="block py-2 text-gray-800 hover:text-primary font-medium">FAQs/Updates</a>
-      <a href="Contact-Us.html" class="block py-2 text-gray-800 hover:text-primary font-medium">Contact Us</a>
-      <div class="mt-4">
-        <a href="#" class="block w-full bg-primary text-white text-center px-5 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition whitespace-nowrap">Get Covered</a>
-      </div>
-    </div>
-  </div>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="index.html" class="nav-link text-gray-800 hover:text-primary font-medium">Home</a>
+<div class="dropdown relative">
+<button class="nav-link text-gray-800 hover:text-primary font-medium flex items-center focus:outline-none" id="about-us-toggle" aria-expanded="false" aria-controls="about-us-dropdown">
+  About Us
+  <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+</button>
+<div id="about-us-dropdown" class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2 hidden" role="region" aria-labelledby="about-us-toggle">
+<a href="About-Festcare-Insurance-Agency.html" class="block px-4 py-2 hover:bg-gray-100">About Festcare Insurance Agency</a>
+<a href="Our-Story.html" class="block px-4 py-2 hover:bg-gray-100">Our Story</a>
+<a href="Mission-Values.html" class="block px-4 py-2 hover:bg-gray-100">Mission & Values</a>
+<a href="Leadership-Team.html" class="block px-4 py-2 hover:bg-gray-100">Leadership Team</a>
+</div>
+</div>
+<div class="dropdown relative">
+<button class="nav-link text-gray-800 hover:text-primary font-medium flex items-center focus:outline-none" id="services-toggle" aria-expanded="false" aria-controls="services-dropdown">
+  Services
+  <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+</button>
+<div id="services-dropdown" class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2 hidden" role="region" aria-labelledby="services-toggle">
+<a href="Comprehensive-Services-Overview.html" class="block px-4 py-2 hover:bg-gray-100">Comprehensive Services Overview</a>
+<a href="Insurance.html" class="block px-4 py-2 hover:bg-gray-100">Insurance</a>
+<a href="Financial-Services.html" class="block px-4 py-2 hover:bg-gray-100">Financial Services</a>
+<a href="Investment-Products.html" class="block px-4 py-2 hover:bg-gray-100">Investment Products</a>
+</div>
+</div>
+<a href="FAQs.html" class="nav-link text-gray-800 hover:text-primary font-medium">FAQs/Updates</a>
+<a href="Contact-Us.html" class="nav-link text-gray-800 hover:text-primary font-medium">Contact Us</a>
+</nav>
+<div class="hidden md:flex items-center space-x-4">
+<a href="#" class="bg-primary text-white px-5 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition whitespace-nowrap">Get Covered</a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3">
+<button class="w-full text-left py-2 text-gray-800 hover:text-primary font-medium flex items-center justify-between focus:outline-none" id="mobile-about-toggle" aria-expanded="false" aria-controls="mobile-about-dropdown">
+  About Us
+  <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+</button>
+<div id="mobile-about-dropdown" class="hidden pl-4 mt-2" role="region" aria-labelledby="mobile-about-toggle">
+<a href="About-Festcare-Insurance-Agency.html" class="block py-2 hover:text-primary">About Festcare Insurance Agency</a>
+<a href="Our-Story.html" class="block py-2 hover:text-primary">Our Story</a>
+<a href="Mission-Values.html" class="block py-2 hover:text-primary">Mission & Values</a>
+<a href="Leadership-Team.html" class="block py-2 hover:text-primary">Leadership Team</a>
+</div>
+<button class="w-full text-left py-2 text-gray-800 hover:text-primary font-medium flex items-center justify-between focus:outline-none" id="mobile-services-toggle" aria-expanded="false" aria-controls="mobile-services-dropdown">
+  Services
+  <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
+</button>
+<div id="mobile-services-dropdown" class="hidden pl-4 mt-2" role="region" aria-labelledby="mobile-services-toggle">
+<a href="Comprehensive-Services-Overview.html" class="block py-2 hover:text-primary">Comprehensive Services Overview</a>
+<a href="Insurance.html" class="block py-2 hover:text-primary">Insurance</a>
+<a href="Financial-Services.html" class="block py-2 hover:text-primary">Financial Services</a>
+<a href="Investment-Products.html" class="block py-2 hover:text-primary">Investment Products</a>
+</div>
+<a href="FAQs.html" class="block py-2 text-gray-800 hover:text-primary font-medium">FAQs/Updates</a>
+<a href="Contact-Us.html" class="block py-2 text-gray-800 hover:text-primary font-medium">Contact Us</a>
+<div class="mt-4">
+<a href="#" class="block w-full bg-primary text-white text-center px-5 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition whitespace-nowrap">Get Covered</a>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Desktop dropdown toggles
+  const aboutToggle = document.getElementById('about-us-toggle');
+  const aboutDropdown = document.getElementById('about-us-dropdown');
+  const servicesToggle = document.getElementById('services-toggle');
+  const servicesDropdown = document.getElementById('services-dropdown');
+
+  aboutToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    aboutDropdown.classList.toggle('hidden');
+    // Close other dropdown
+    if (!expanded) {
+      servicesDropdown.classList.add('hidden');
+      servicesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  servicesToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    servicesDropdown.classList.toggle('hidden');
+    // Close other dropdown
+    if (!expanded) {
+      aboutDropdown.classList.add('hidden');
+      aboutToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!aboutToggle.contains(e.target) && !aboutDropdown.contains(e.target)) {
+      aboutDropdown.classList.add('hidden');
+      aboutToggle.setAttribute('aria-expanded', 'false');
+    }
+    if (!servicesToggle.contains(e.target) && !servicesDropdown.contains(e.target)) {
+      servicesDropdown.classList.add('hidden');
+      servicesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuButton.addEventListener('click', function() {
+    mobileMenu.classList.toggle('hidden');
+    // Toggle icon
+    const icon = mobileMenuButton.querySelector('i');
+    if (mobileMenu.classList.contains('hidden')) {
+      icon.className = 'ri-menu-line ri-lg';
+    } else {
+      icon.className = 'ri-close-line ri-lg';
+    }
+  });
+
+  // Mobile dropdown toggles
+  const mobileAboutToggle = document.getElementById('mobile-about-toggle');
+  const mobileAboutDropdown = document.getElementById('mobile-about-dropdown');
+  const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+  const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+
+  mobileAboutToggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    mobileAboutDropdown.classList.toggle('hidden');
+    // Close other dropdown
+    if (!expanded) {
+      mobileServicesDropdown.classList.add('hidden');
+      mobileServicesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  mobileServicesToggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    mobileServicesDropdown.classList.toggle('hidden');
+    // Close other dropdown
+    if (!expanded) {
+      mobileAboutDropdown.classList.add('hidden');
+      mobileAboutToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+</script>
 </header>
 
 <!-- Main Content -->
