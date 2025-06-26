@@ -155,9 +155,9 @@ input:checked + .slider:before {
       <a href="Contact-Us.html" class="bg-primary text-white px-5 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition whitespace-nowrap">Get Covered</a>
     </div>
     <!-- Mobile Menu Button -->
-    <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+    <a href="#cta-section" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
       <i class="ri-menu-line ri-lg"></i>
-    </button>
+    </a>
   </div>
     <!-- Mobile Navigation -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
@@ -214,6 +214,21 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!servicesToggle.contains(e.target) && !servicesDropdown.contains(e.target)) {
       servicesDropdown.classList.add('hidden');
       servicesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    mobileMenu.classList.toggle('hidden');
+    // Toggle icon
+    const icon = mobileMenuButton.querySelector('i');
+    if (mobileMenu.classList.contains('hidden')) {
+      icon.className = 'ri-menu-line ri-lg';
+    } else {
+      icon.className = 'ri-close-line ri-lg';
     }
   });
 });
