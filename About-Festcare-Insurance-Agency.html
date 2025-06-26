@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Festcare Insurance Agency</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1B365D',secondary:'#C5A572'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Open Sans', sans-serif;
+color: #333333;
+}
+h1, h2, h3, h4, h5, h6, .nav-link, .btn {
+font-family: 'Montserrat', sans-serif;
+}
+.logo {
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+}
+input:focus, select:focus, textarea:focus {
+outline: none;
+border-color: #1B365D;
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #1B365D;
+border-radius: 4px;
+background-color: white;
+display: inline-block;
+position: relative;
+cursor: pointer;
+}
+.custom-checkbox:checked {
+background-color: #1B365D;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #1B365D;
+}
+input:checked + .slider:before {
+transform: translateX(24px);
+}
+.dropdown-content {
+display: none;
+position: absolute;
+min-width: 200px;
+z-index: 50;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.whatsapp-btn {
+position: fixed;
+bottom: 24px;
+right: 24px;
+z-index: 100;
+}
+.timeline-item:nth-child(even) {
+flex-direction: row-reverse;
+}
+.timeline-item:nth-child(even) .timeline-content {
+text-align: right;
+}
+.timeline-item:nth-child(even) .timeline-content::before {
+left: auto;
+right: -10px;
+border-width: 10px 0 10px 10px;
+}
+.timeline-item:not(:last-child)::after {
+content: '';
+position: absolute;
+width: 2px;
+background-color: #1B365D;
+top: 24px;
+bottom: -24px;
+left: 50%;
+margin-left: -1px;
+}
+.team-card:hover .team-overlay {
+opacity: 1;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-md">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<a href="#" class="logo text-primary text-2xl font-bold flex items-center">
+<span class="text-primary mr-2">Festcare</span>
+<span class="text-secondary">Insurance</span>
+</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<div class="dropdown relative">
+<a href="index.html" class="nav-link text-primary hover:text-primary font-medium">Home</a>
+<div class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2">
+<a href="Our-Story.html" class="block px-4 py-2 hover:bg-gray-100">Our Story</a>
+<a href="Mission-Values.html" class="block px-4 py-2 hover:bg-gray-100">Mission & Values</a>
+<a href="Leadership-Team.html" class="block px-4 py-2 hover:bg-gray-100">Leadership Team</a>
+</div>
+</div>
+<div class="dropdown relative">
+<a href="#" class="nav-link text-gray-800 hover:text-primary font-medium">About Us</a>
+<div class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2">
+<a href="#history" class="block px-4 py-2 hover:bg-gray-100">Our Story</a>
+<a href="#mission" class="block px-4 py-2 hover:bg-gray-100">Mission & Values</a>
+<a href="#team" class="block px-4 py-2 hover:bg-gray-100">Leadership Team</a>
+</div>
+</div>
+<div class="dropdown relative">
+<a href="Comprehensive-Services-Overview.html" class="nav-link text-gray-800 hover:text-primary font-medium">Services</a>
+<div class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2">
+<a href="#" class="block px-4 py-2 hover:bg-gray-100">Insurance</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-100">Financial Services</a>
+<a href="#" class="block px-4 py-2 hover:bg-gray-100">Investment Products</a>
+</div>
+</div>
+<a href="#" class="nav-link text-gray-800 hover:text-primary font-medium">FAQs/Updates</a>
+<a href="#" class="nav-link text-gray-800 hover:text-primary font-medium">Contact Us</a>
+</nav>
+<div class="hidden md:flex items-center space-x-4">
+<a href="#" class="bg-primary text-white px-5 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition whitespace-nowrap">Get Covered</a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3">
+<a href="index.html" class="block py-2 text-gray-800 hover:text-primary font-medium">Home</a>
+<a href="#" class="block py-2 text-primary hover:text-primary font-medium">About Us</a>
+<a href="Comprehensive-Services-Overview.html" class="block py-2 text-gray-800 hover:text-primary font-medium">Services</a>
+<a href="#" class="block py-2 text-gray-800 hover:text-primary font-medium">FAQs/Updates</a>
+<a href="#" class="block py-2 text-gray-800 hover:text-primary font-medium">Contact Us</a>
+<div class="mt-4">
+<a href="#" class="block w-full bg-primary text-white text-center px-5 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition whitespace-nowrap">Get Covered</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[600px] bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520insurance%2520team%2520in%2520modern%2520office%2520setting%252C%2520diverse%2520group%2520of%2520professionals%2520in%2520business%2520attire%252C%2520warm%2520lighting%252C%2520clean%2520modern%2520background%252C%2520team%2520collaboration%252C%2520positive%2520atmosphere%252C%2520high%2520quality%2520professional%2520photography%252C%2520soft%2520natural%2520lighting&width=1920&height=1080&seq=10&orientation=landscape');">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40"></div>
+<div class="container mx-auto px-4 h-full flex items-center">
+<div class="max-w-2xl relative z-10">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">Our Story</h1>
+<p class="text-xl text-white/90 mb-8 max-w-xl">For over 15 years, Festcare Insurance Agency has been securing futures and growing wealth for individuals and businesses across Kenya.</p>
+<a href="#team" class="bg-secondary text-white px-6 py-3 !rounded-button font-semibold hover:bg-opacity-90 transition text-center whitespace-nowrap">Meet Our Team</a>
+</div>
+</div>
+</section>
+<!-- Breadcrumbs -->
+<div class="bg-gray-50 py-3">
+<div class="container mx-auto px-4">
+<div class="flex items-center text-sm text-gray-600">
+<a href="index.html" class="hover:text-primary">Home</a>
+<span class="mx-2">/</span>
+<span class="text-primary font-medium">About Us</span>
+</div>
+</div>
+</div>
+<!-- Company History Section -->
+<section id="history" class="py-16">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-primary mb-4">Our Journey Through the Years</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">From our humble beginnings to becoming one of Kenya's trusted insurance and financial service providers, our journey has been defined by growth, innovation, and unwavering commitment to our clients.</p>
+</div>
+<div class="relative max-w-5xl mx-auto">
+<div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -ml-px"></div>
+<div class="timeline-item relative flex items-center mb-16">
+<div class="w-1/2"></div>
+<div class="absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-primary border-4 border-white z-10"></div>
+<div class="timeline-content w-1/2 pl-12 relative">
+<div class="bg-white p-6 rounded-lg shadow-md">
+<span class="inline-block px-4 py-1 bg-primary/10 text-primary font-semibold rounded-full mb-3">2010</span>
+<h3 class="text-xl font-bold text-primary mb-2">Foundation</h3>
+<p class="text-gray-600">Festcare Insurance Agency was founded by Samuel Mwangi with a vision to provide accessible insurance solutions to Kenyans. Starting with just 3 employees in a small office in Nairobi.</p>
+</div>
+</div>
+</div>
+<div class="timeline-item relative flex items-center mb-16">
+<div class="w-1/2"></div>
+<div class="absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-primary border-4 border-white z-10"></div>
+<div class="timeline-content w-1/2 pl-12 relative">
+<div class="bg-white p-6 rounded-lg shadow-md">
+<span class="inline-block px-4 py-1 bg-primary/10 text-primary font-semibold rounded-full mb-3">2013</span>
+<h3 class="text-xl font-bold text-primary mb-2">Expansion</h3>
+<p class="text-gray-600">Opened our second branch in Mombasa and expanded our service offerings to include financial planning and investment advisory services, growing our team to 15 professionals.</p>
+</div>
+</div>
+</div>
+<div class="timeline-item relative flex items-center mb-16">
+<div class="w-1/2"></div>
+<div class="absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-primary border-4 border-white z-10"></div>
+<div class="timeline-content w-1/2 pl-12 relative">
+<div class="bg-white p-6 rounded-lg shadow-md">
+<span class="inline-block px-4 py-1 bg-primary/10 text-primary font-semibold rounded-full mb-3">2016</span>
+<h3 class="text-xl font-bold text-primary mb-2">Strategic Partnership</h3>
+<p class="text-gray-600">Joined the Strathwall Group, allowing us to leverage greater resources and expertise to better serve our growing client base across Kenya. Introduced innovative digital solutions.</p>
+</div>
+</div>
+</div>
+<div class="timeline-item relative flex items-center mb-16">
+<div class="w-1/2"></div>
+<div class="absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-primary border-4 border-white z-10"></div>
+<div class="timeline-content w-1/2 pl-12 relative">
+<div class="bg-white p-6 rounded-lg shadow-md">
+<span class="inline-block px-4 py-1 bg-primary/10 text-primary font-semibold rounded-full mb-3">2019</span>
+<h3 class="text-xl font-bold text-primary mb-2">Award Recognition</h3>
+<p class="text-gray-600">Received the "Excellence in Customer Service" award from the Insurance Regulatory Authority of Kenya. Launched our specialized business insurance division.</p>
+</div>
+</div>
+</div>
+<div class="timeline-item relative flex items-center">
+<div class="w-1/2"></div>
+<div class="absolute left-1/2 -ml-3 w-6 h-6 rounded-full bg-primary border-4 border-white z-10"></div>
+<div class="timeline-content w-1/2 pl-12 relative">
+<div class="bg-white p-6 rounded-lg shadow-md">
+<span class="inline-block px-4 py-1 bg-primary/10 text-primary font-semibold rounded-full mb-3">2023</span>
+<h3 class="text-xl font-bold text-primary mb-2">Digital Transformation</h3>
+<p class="text-gray-600">Launched our comprehensive digital platform, allowing clients to manage their policies, investments, and claims online. Expanded to 5 branches across Kenya with over 50 employees.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission and Values Section -->
+<section id="mission" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-primary mb-4">Our Mission & Values</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">At Festcare Insurance Agency, our mission and values guide everything we do, from the way we serve our clients to how we develop our products and services.</p>
+</div>
+<div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8 mb-16">
+<h3 class="text-2xl font-bold text-primary mb-4 text-center">Our Mission</h3>
+<p class="text-xl text-center text-gray-700 italic">"To empower Kenyans to build secure financial futures through accessible, innovative insurance and investment solutions delivered with integrity, expertise, and personalized service."</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-shield-star-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Trust & Integrity</h3>
+<p class="text-gray-600">We build lasting relationships based on transparency and honesty. Our clients trust us with their financial security, and we honor that trust in every interaction.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-customer-service-2-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Client-Centered Approach</h3>
+<p class="text-gray-600">We put our clients at the center of everything we do, taking time to understand their unique needs and goals to provide truly personalized solutions.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-award-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Excellence</h3>
+<p class="text-gray-600">We strive for excellence in every aspect of our business, from the quality of our advice to the efficiency of our claims processing and customer service.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-community-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Community Impact</h3>
+<p class="text-gray-600">We are committed to making a positive impact in the communities we serve through financial education, charitable initiatives, and sustainable business practices.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-lightbulb-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Innovation</h3>
+<p class="text-gray-600">We continuously seek innovative solutions to meet the evolving needs of our clients, embracing technology and new approaches to enhance our service delivery.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-team-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-4">Collaboration</h3>
+<p class="text-gray-600">We believe in the power of teamwork and partnership, working closely with our clients, partners, and each other to achieve shared goals and success.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership Team Section -->
+<section id="team" class="py-16">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-primary mb-4">Meet Our Leadership Team</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Our experienced leadership team brings decades of combined expertise in insurance, finance, and customer service to guide our company's vision and operations.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="team-card relative rounded-lg overflow-hidden shadow-md group">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520male%2520CEO%2520in%2520business%2520suit%252C%2520confident%2520pose%252C%2520neutral%2520background%252C%2520professional%2520headshot%252C%2520warm%2520lighting%252C%2520high%2520quality%2520professional%2520photography&width=600&height=700&seq=11&orientation=portrait" alt="Samuel Mwangi" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-bold text-primary">Samuel Mwangi</h3>
+<p class="text-secondary font-medium mb-3">Founder & CEO</p>
+<p class="text-gray-600 line-clamp-3">With over 20 years of experience in the insurance industry, Samuel founded Festcare with a vision to transform how Kenyans access financial security.</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/90 p-6 flex flex-col justify-center opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-bold text-white">Samuel Mwangi</h3>
+<p class="text-secondary font-medium mb-4">Founder & CEO</p>
+<p class="text-white/90 mb-6">With over 20 years of experience in the insurance industry, Samuel founded Festcare with a vision to transform how Kenyans access financial security. His leadership has guided the company through significant growth and innovation.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-mail-fill text-white"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="team-card relative rounded-lg overflow-hidden shadow-md group">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520female%2520executive%2520in%2520business%2520attire%252C%2520confident%2520pose%252C%2520neutral%2520background%252C%2520professional%2520headshot%252C%2520warm%2520lighting%252C%2520high%2520quality%2520professional%2520photography&width=600&height=700&seq=12&orientation=portrait" alt="Grace Odhiambo" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-bold text-primary">Grace Odhiambo</h3>
+<p class="text-secondary font-medium mb-3">Chief Operations Officer</p>
+<p class="text-gray-600 line-clamp-3">Grace oversees all operational aspects of Festcare, ensuring efficient service delivery and continuous improvement in our processes.</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/90 p-6 flex flex-col justify-center opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-bold text-white">Grace Odhiambo</h3>
+<p class="text-secondary font-medium mb-4">Chief Operations Officer</p>
+<p class="text-white/90 mb-6">Grace oversees all operational aspects of Festcare, ensuring efficient service delivery and continuous improvement in our processes. With her background in business administration and insurance operations, she has implemented systems that have significantly enhanced our client experience.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-mail-fill text-white"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="team-card relative rounded-lg overflow-hidden shadow-md group">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520male%2520financial%2520executive%2520in%2520business%2520suit%252C%2520confident%2520pose%252C%2520neutral%2520background%252C%2520professional%2520headshot%252C%2520warm%2520lighting%252C%2520high%2520quality%2520professional%2520photography&width=600&height=700&seq=13&orientation=portrait" alt="David Kimani" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-bold text-primary">David Kimani</h3>
+<p class="text-secondary font-medium mb-3">Chief Financial Officer</p>
+<p class="text-gray-600 line-clamp-3">David brings extensive expertise in financial management and strategy, guiding our financial growth and investment decisions.</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/90 p-6 flex flex-col justify-center opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-bold text-white">David Kimani</h3>
+<p class="text-secondary font-medium mb-4">Chief Financial Officer</p>
+<p class="text-white/90 mb-6">David brings extensive expertise in financial management and strategy, guiding our financial growth and investment decisions. His background in investment banking and financial analysis has been instrumental in developing our investment product offerings and financial stability.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-mail-fill text-white"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="team-card relative rounded-lg overflow-hidden shadow-md group">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520female%2520marketing%2520executive%2520in%2520business%2520attire%252C%2520confident%2520pose%252C%2520neutral%2520background%252C%2520professional%2520headshot%252C%2520warm%2520lighting%252C%2520high%2520quality%2520professional%2520photography&width=600&height=700&seq=14&orientation=portrait" alt="Rebecca Njeri" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-bold text-primary">Rebecca Njeri</h3>
+<p class="text-secondary font-medium mb-3">Head of Marketing</p>
+<p class="text-gray-600 line-clamp-3">Rebecca leads our marketing initiatives, developing strategies to communicate our value proposition and build our brand presence across Kenya.</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/90 p-6 flex flex-col justify-center opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-bold text-white">Rebecca Njeri</h3>
+<p class="text-secondary font-medium mb-4">Head of Marketing</p>
+<p class="text-white/90 mb-6">Rebecca leads our marketing initiatives, developing strategies to communicate our value proposition and build our brand presence across Kenya. Her innovative approach to digital marketing has significantly expanded our reach and client engagement.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-mail-fill text-white"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="team-card relative rounded-lg overflow-hidden shadow-md group">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520male%2520technology%2520executive%2520in%2520business%2520casual%2520attire%252C%2520confident%2520pose%252C%2520neutral%2520background%252C%2520professional%2520headshot%252C%2520warm%2520lighting%252C%2520high%2520quality%2520professional%2520photography&width=600&height=700&seq=15&orientation=portrait" alt="Michael Otieno" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-bold text-primary">Michael Otieno</h3>
+<p class="text-secondary font-medium mb-3">Head of Technology</p>
+<p class="text-gray-600 line-clamp-3">Michael drives our digital transformation, implementing technology solutions that enhance client experience and operational efficiency.</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/90 p-6 flex flex-col justify-center opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-bold text-white">Michael Otieno</h3>
+<p class="text-secondary font-medium mb-4">Head of Technology</p>
+<p class="text-white/90 mb-6">Michael drives our digital transformation, implementing technology solutions that enhance client experience and operational efficiency. His expertise in fintech has been crucial in developing our online platform and digital service capabilities.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-mail-fill text-white"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="team-card relative rounded-lg overflow-hidden shadow-md group">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520female%2520customer%2520service%2520executive%2520in%2520business%2520attire%252C%2520confident%2520pose%252C%2520neutral%2520background%252C%2520professional%2520headshot%252C%2520warm%2520lighting%252C%2520high%2520quality%2520professional%2520photography&width=600&height=700&seq=16&orientation=portrait" alt="Sarah Wambui" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-bold text-primary">Sarah Wambui</h3>
+<p class="text-secondary font-medium mb-3">Head of Customer Experience</p>
+<p class="text-gray-600 line-clamp-3">Sarah ensures that every client interaction exceeds expectations, overseeing our customer service team and client relationship management.</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/90 p-6 flex flex-col justify-center opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-bold text-white">Sarah Wambui</h3>
+<p class="text-secondary font-medium mb-4">Head of Customer Experience</p>
+<p class="text-white/90 mb-6">Sarah ensures that every client interaction exceeds expectations, overseeing our customer service team and client relationship management. Her dedication to service excellence has been recognized with industry awards and consistently high client satisfaction ratings.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-mail-fill text-white"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Company Achievements Section -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-primary mb-4">Our Achievements</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">We're proud of the milestones we've reached and the impact we've made in the lives of our clients and communities across Kenya.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-user-heart-line ri-xl text-primary"></i>
+</div>
+<div class="text-4xl font-bold text-primary mb-2 counter">5,000+</div>
+<h3 class="text-lg font-semibold text-gray-700 mb-3">Satisfied Clients</h3>
+<p class="text-gray-600">Individuals and businesses who trust us with their financial security and future growth.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-money-dollar-circle-line ri-xl text-primary"></i>
+</div>
+<div class="text-4xl font-bold text-primary mb-2 counter">KSh 2B+</div>
+<h3 class="text-lg font-semibold text-gray-700 mb-3">Assets Under Management</h3>
+<p class="text-gray-600">Carefully managed investments helping our clients grow their wealth and secure their future.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-award-line ri-xl text-primary"></i>
+</div>
+<div class="text-4xl font-bold text-primary mb-2 counter">12</div>
+<h3 class="text-lg font-semibold text-gray-700 mb-3">Industry Awards</h3>
+<p class="text-gray-600">Recognized for excellence in customer service, innovation, and business performance.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-building-line ri-xl text-primary"></i>
+</div>
+<div class="text-4xl font-bold text-primary mb-2 counter">5</div>
+<h3 class="text-lg font-semibold text-gray-700 mb-3">Branches Nationwide</h3>
+<p class="text-gray-600">Serving clients across Kenya with local presence and personalized service.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-16">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-primary mb-4">What Our Clients Say</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Don't just take our word for it. Hear from individuals and businesses who have trusted Festcare Insurance Agency with their financial security and growth.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex mb-6">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-600 italic mb-6">"Festcare's team guided me through setting up a comprehensive retirement plan that gives me confidence about my future. Their personalized approach and clear explanations made what seemed complex very accessible."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520middle-aged%2520male%2520client%252C%2520casual%2520business%2520attire%252C%2520neutral%2520background%252C%2520warm%2520lighting%252C%2520professional%2520headshot%252C%2520high%2520quality&width=100&height=100&seq=17&orientation=squarish" alt="Jonathan Mutua" class="w-12 h-12 rounded-full mr-4 object-cover">
+<div>
+<p class="font-semibold">Jonathan Mutua</p>
+<p class="text-sm text-gray-600">Retirement Planning Client</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex mb-6">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-600 italic mb-6">"As a business owner, I needed comprehensive coverage for my company and employees. Festcare designed a tailored solution that protected my business while offering valuable benefits to my team. Their service has been exceptional."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520female%2520business%2520owner%252C%2520business%2520attire%252C%2520neutral%2520background%252C%2520warm%2520lighting%252C%2520professional%2520headshot%252C%2520high%2520quality&width=100&height=100&seq=18&orientation=squarish" alt="Catherine Nyambura" class="w-12 h-12 rounded-full mr-4 object-cover">
+<div>
+<p class="font-semibold">Catherine Nyambura</p>
+<p class="text-sm text-gray-600">Business Insurance Client</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex mb-6">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-half-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-600 italic mb-6">"When I needed to file a claim after a car accident, Festcare's team was there every step of the way. The process was smooth, communication was clear, and they ensured I received fair compensation quickly. I couldn't ask for better service."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520young%2520male%2520client%252C%2520casual%2520attire%252C%2520neutral%2520background%252C%2520warm%2520lighting%252C%2520professional%2520headshot%252C%2520high%2520quality&width=100&height=100&seq=19&orientation=squarish" alt="Brian Omondi" class="w-12 h-12 rounded-full mr-4 object-cover">
+<div>
+<p class="font-semibold">Brian Omondi</p>
+<p class="text-sm text-gray-600">Auto Insurance Client</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex mb-6">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+<p class="text-gray-600 italic mb-6">"The investment advice from Festcare has helped me diversify my portfolio and achieve consistent returns even during market volatility. Their financial advisors are truly knowledgeable and take time to understand my goals."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=Professional%2520Kenyan%2520middle-aged%2520female%2520client%252C%2520business%2520casual%2520attire%252C%2520neutral%2520background%252C%2520warm%2520lighting%252C%2520professional%2520headshot%252C%2520high%2520quality&width=100&height=100&seq=20&orientation=squarish" alt="Elizabeth Achieng" class="w-12 h-12 rounded-full mr-4 object-cover">
+<div>
+<p class="font-semibold">Elizabeth Achieng</p>
+<p class="text-sm text-gray-600">Investment Client</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-16 bg-primary">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl font-bold text-white mb-6">Ready to Secure Your Future?</h2>
+<p class="text-xl text-white/80 mb-8">Let our expert advisors help you find the perfect insurance and investment solutions tailored to your needs.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="#" class="bg-secondary text-white px-8 py-3 !rounded-button font-semibold hover:bg-opacity-90 transition text-center whitespace-nowrap">Contact Us Today</a>
+<a href="#" class="bg-white text-primary px-8 py-3 !rounded-button font-semibold hover:bg-opacity-90 transition text-center whitespace-nowrap">Explore Our Services</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="text-2xl font-bold flex items-center mb-6">
+<span class="text-white mr-2">Festcare</span>
+<span class="text-secondary">Insurance</span>
+</a>
+<p class="text-white/70 mb-6">Comprehensive insurance and financial solutions tailored to secure your future and grow your wealth across Kenya.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="https://readdy.ai/home/f04ae288-6dce-4f0d-af07-7e69fcc3ff05/5f59dc95-8d69-4bb1-9116-ce061a0fb315" data-readdy="true" class="text-white/70 hover:text-white transition">Home</a></li>
+<li><a href="#" class="text-white/70 hover:text-white transition">About Us</a></li>
+<li><a href="#" class="text-white/70 hover:text-white transition">Services</a></li>
+<li><a href="FAQs.html" class="text-white/70 hover:text-white transition">FAQs</a></li>
+<li><a href="Contact-Us.html" class="text-white/70 hover:text-white transition">Contact Us</a></li>
+<li><a href="Careers.html" class="text-white/70 hover:text-white transition">Careers</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Our Services</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-white/70 hover:text-white transition">Life Insurance</a></li>
+<li><a href="#" class="text-white/70 hover:text-white transition">Health Insurance</a></li>
+<li><a href="#" class="text-white/70 hover:text-white transition">Property Insurance</a></li>
+<li><a href="#" class="text-white/70 hover:text-white transition">Retirement Planning</a></li>
+<li><a href="#" class="text-white/70 hover:text-white transition">Wealth Management</a></li>
+<li><a href="#" class="text-white/70 hover:text-white transition">Investment Products</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Contact Us</h3>
+<ul class="space-y-4">
+<li class="flex">
+<i class="ri-map-pin-line mt-1 mr-3"></i>
+<span>P.O. Box 6755, Karen, Nairobi, Kenya</span>
+</li>
+<li class="flex">
+<i class="ri-phone-line mt-1 mr-3"></i>
+<span>0720 680272</span>
+</li>
+<li class="flex">
+<i class="ri-mail-line mt-1 mr-3"></i>
+<span>info@festcareinsurance.co.ke</span>
+</li>
+<li class="flex">
+<i class="ri-time-line mt-1 mr-3"></i>
+<span>Mon-Fri: 8:00 AM - 5:00 PM<br>Sat: 9:00 AM - 1:00 PM</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/20">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-white/70 text-sm mb-4 md:mb-0">© 2025 Festcare Insurance Agency. All rights reserved. Part of the Strathwall Group.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-white/70 hover:text-white text-sm transition">Privacy Policy</a>
+<a href="#" class="text-white/70 hover:text-white text-sm transition">Terms of Service</a>
+<a href="#" class="text-white/70 hover:text-white text-sm transition">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/254720680272" class="whatsapp-btn w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition">
+<i class="ri-whatsapp-line ri-xl text-white"></i>
+</a>
+<!-- Scripts -->
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+// Toggle icon
+const icon = mobileMenuButton.querySelector('i');
+if (mobileMenu.classList.contains('hidden')) {
+icon.className = 'ri-menu-line ri-lg';
+} else {
+icon.className = 'ri-close-line ri-lg';
+}
+});
+});
+</script>
+<script id="team-hover-script">
+document.addEventListener('DOMContentLoaded', function() {
+const teamCards = document.querySelectorAll('.team-card');
+teamCards.forEach(card => {
+card.addEventListener('mouseenter', function() {
+this.querySelector('.team-overlay').style.opacity = '1';
+});
+card.addEventListener('mouseleave', function() {
+this.querySelector('.team-overlay').style.opacity = '0';
+});
+});
+});
+</script>
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 100,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>
