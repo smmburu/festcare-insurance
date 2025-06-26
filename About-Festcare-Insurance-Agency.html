@@ -99,8 +99,13 @@ position: absolute;
 min-width: 200px;
 z-index: 50;
 }
-.dropdown:hover .dropdown-content {
+/* Removed to fix dropdown disappearance on hover */
+/* .dropdown:hover .dropdown-content {
 display: block;
+} */
+/* Remove hover dropdown to prevent weird behavior */
+.dropdown:hover .dropdown-content {
+display: none;
 }
 .whatsapp-btn {
 position: fixed;
@@ -146,10 +151,10 @@ opacity: 1;
 <nav class="hidden md:flex items-center space-x-8">
 <a href="index.html" class="nav-link text-gray-800 hover:text-primary font-medium">Home</a>
 <div class="dropdown relative">
-<button class="nav-link text-gray-800 hover:text-primary font-medium flex items-center focus:outline-none" id="about-us-toggle" aria-expanded="false" aria-controls="about-us-dropdown">
+<a href="#cta-section" class="nav-link text-gray-800 hover:text-primary font-medium flex items-center focus:outline-none" id="about-us-toggle" aria-expanded="false" aria-controls="about-us-dropdown">
   About Us
   <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
-</button>
+</a>
 <div id="about-us-dropdown" class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2 hidden" role="region" aria-labelledby="about-us-toggle">
 <a href="#history" class="block px-4 py-2 hover:bg-gray-100">Our Story</a>
 <a href="#mission" class="block px-4 py-2 hover:bg-gray-100">Mission & Values</a>
@@ -157,10 +162,10 @@ opacity: 1;
 </div>
 </div>
 <div class="dropdown relative">
-<button class="nav-link text-gray-800 hover:text-primary font-medium flex items-center focus:outline-none" id="services-toggle" aria-expanded="false" aria-controls="services-dropdown">
+<a href="#cta-section" class="nav-link text-gray-800 hover:text-primary font-medium flex items-center focus:outline-none" id="services-toggle" aria-expanded="false" aria-controls="services-dropdown">
   Services
   <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
-</button>
+</a>
 <div id="services-dropdown" class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2 hidden" role="region" aria-labelledby="services-toggle">
 <a href="Insurance.html" class="block px-4 py-2 hover:bg-gray-100">Insurance</a>
 <a href="Financial-Services.html" class="block px-4 py-2 hover:bg-gray-100">Financial Services</a>
@@ -181,19 +186,19 @@ opacity: 1;
 <!-- Mobile Navigation -->
 <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
 <div class="container mx-auto px-4 py-3">
-<button class="w-full text-left py-2 text-gray-800 hover:text-primary font-medium flex items-center justify-between focus:outline-none" id="mobile-about-toggle" aria-expanded="false" aria-controls="mobile-about-dropdown">
+<a href="#cta-section" class="w-full text-left py-2 text-gray-800 hover:text-primary font-medium flex items-center justify-between focus:outline-none" id="mobile-about-toggle" aria-expanded="false" aria-controls="mobile-about-dropdown">
   About Us
   <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
-</button>
+</a>
 <div id="mobile-about-dropdown" class="hidden pl-4 mt-2" role="region" aria-labelledby="mobile-about-toggle">
 <a href="#history" class="block py-2 hover:text-primary">Our Story</a>
 <a href="#mission" class="block py-2 hover:text-primary">Mission & Values</a>
 <a href="#team" class="block py-2 hover:text-primary">Leadership Team</a>
 </div>
-<button class="w-full text-left py-2 text-gray-800 hover:text-primary font-medium flex items-center justify-between focus:outline-none" id="mobile-services-toggle" aria-expanded="false" aria-controls="mobile-services-dropdown">
+<a href="#cta-section" class="w-full text-left py-2 text-gray-800 hover:text-primary font-medium flex items-center justify-between focus:outline-none" id="mobile-services-toggle" aria-expanded="false" aria-controls="mobile-services-dropdown">
   Services
   <svg class="ml-1 w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z"/></svg>
-</button>
+</a>
 <div id="mobile-services-dropdown" class="hidden pl-4 mt-2" role="region" aria-labelledby="mobile-services-toggle">
 <a href="Insurance.html" class="block py-2 hover:text-primary">Insurance</a>
 <a href="Financial-Services.html" class="block py-2 hover:text-primary">Financial Services</a>
