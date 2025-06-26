@@ -115,7 +115,7 @@ input:checked + .slider:before {
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-white shadow-md">
   <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="#" class="logo flex flex-col items-start">
+    <a href="index.html" class="logo flex flex-col items-start">
       <img src="assets/Festcare - Insurance - Logo.png" alt="Festcare Insurance Logo" class="h-10 mb-1" />
       <span class="text-xs text-gray-600 uppercase tracking-wide">Member of Strathwell Group</span>
     </a>
@@ -129,7 +129,7 @@ input:checked + .slider:before {
             <path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z" />
           </svg>
         </button>
-        <div id="about-us-dropdown" class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2 hidden" role="region" aria-labelledby="about-us-toggle">
+        <div id="about-us-dropdown" class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2 hidden absolute left-0" role="region" aria-labelledby="about-us-toggle">
           <a href="Our-Story.html" class="block px-4 py-2 hover:bg-gray-100">Our Story</a>
           <a href="Mission-Values.html" class="block px-4 py-2 hover:bg-gray-100">Mission & Values</a>
           <a href="Leadership-Team.html" class="block px-4 py-2 hover:bg-gray-100">Leadership Team</a>
@@ -142,7 +142,7 @@ input:checked + .slider:before {
             <path d="M5.516 7.548l4.484 4.484 4.484-4.484L15.484 9l-5.484 5.484L4.516 9z" />
           </svg>
         </button>
-        <div id="services-dropdown" class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2 hidden" role="region" aria-labelledby="services-toggle">
+        <div id="services-dropdown" class="dropdown-content bg-white shadow-lg rounded-md mt-2 py-2 hidden absolute left-0" role="region" aria-labelledby="services-toggle">
           <a href="Insurance.html" class="block px-4 py-2 hover:bg-gray-100">Insurance</a>
           <a href="Financial-Services.html" class="block px-4 py-2 hover:bg-gray-100">Financial Services</a>
           <a href="Investment-Products.html" class="block px-4 py-2 hover:bg-gray-100">Investment Products</a>
@@ -192,84 +192,6 @@ input:checked + .slider:before {
       </div>
     </div>
   </div>
-</header>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Desktop dropdown toggles
-  const aboutToggle = document.getElementById('about-us-toggle');
-  const aboutDropdown = document.getElementById('about-us-dropdown');
-  const servicesToggle = document.getElementById('services-toggle');
-  const servicesDropdown = document.getElementById('services-dropdown');
-
-  aboutToggle.addEventListener('click', function(e) {
-    e.preventDefault();
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !expanded);
-    aboutDropdown.classList.toggle('hidden');
-    // Close other dropdown
-    if (!expanded) {
-      servicesDropdown.classList.add('hidden');
-      servicesToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  servicesToggle.addEventListener('click', function(e) {
-    e.preventDefault();
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !expanded);
-    servicesDropdown.classList.toggle('hidden');
-    // Close other dropdown
-    if (!expanded) {
-      aboutDropdown.classList.add('hidden');
-      aboutToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  // Close dropdowns when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!aboutToggle.contains(e.target) && !aboutDropdown.contains(e.target)) {
-      aboutDropdown.classList.add('hidden');
-      aboutToggle.setAttribute('aria-expanded', 'false');
-    }
-    if (!servicesToggle.contains(e.target) && !servicesDropdown.contains(e.target)) {
-      servicesDropdown.classList.add('hidden');
-      servicesToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-</script>
-    }
-  });
-
-  // Mobile dropdown toggles
-  const mobileAboutToggle = document.getElementById('mobile-about-toggle');
-  const mobileAboutDropdown = document.getElementById('mobile-about-dropdown');
-  const mobileServicesToggle = document.getElementById('mobile-services-toggle');
-  const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
-
-  mobileAboutToggle.addEventListener('click', function() {
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !expanded);
-    mobileAboutDropdown.classList.toggle('hidden');
-    // Close other dropdown
-    if (!expanded) {
-      mobileServicesDropdown.classList.add('hidden');
-      mobileServicesToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  mobileServicesToggle.addEventListener('click', function() {
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !expanded);
-    mobileServicesDropdown.classList.toggle('hidden');
-    // Close other dropdown
-    if (!expanded) {
-      mobileAboutDropdown.classList.add('hidden');
-      mobileAboutToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-</script>
 </header>
 <!-- Hero Section -->
 <section class="relative h-[600px] bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20Kenyan%20family%20and%20business%20professionals%20in%20a%20modern%20office%20setting%20with%20city%20skyline%20in%20background%2C%20warm%20lighting%2C%20professional%20attire%2C%20diverse%20group%20of%20people%2C%20confident%20expressions%2C%20modern%20architecture%2C%20clean%20composition%2C%20high%20quality%20professional%20photography&width=1920&height=1080&seq=1&orientation=landscape');">
@@ -865,39 +787,110 @@ Learn More
 <i class="ri-whatsapp-line ri-xl text-white"></i>
 </a>
 <!-- Scripts -->
-<script id="mobile-menu-script">
-document.addEventListener('DOMContentLoaded', function() {
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-mobileMenuButton.addEventListener('click', function() {
-mobileMenu.classList.toggle('hidden');
-// Toggle icon
-const icon = mobileMenuButton.querySelector('i');
-if (mobileMenu.classList.contains('hidden')) {
-icon.className = 'ri-menu-line ri-lg';
-} else {
-icon.className = 'ri-close-line ri-lg';
-}
-});
+<script id="dropdown-script">
+document.addEventListener('DOMContentLoaded', function () {
+  // Desktop dropdown toggles
+  const aboutToggle = document.getElementById('about-us-toggle');
+  const aboutDropdown = document.getElementById('about-us-dropdown');
+  const servicesToggle = document.getElementById('services-toggle');
+  const servicesDropdown = document.getElementById('services-dropdown');
+
+  aboutToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    aboutDropdown.classList.toggle('hidden');
+    // Close other dropdown
+    if (!expanded) {
+      servicesDropdown.classList.add('hidden');
+      servicesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  servicesToggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    servicesDropdown.classList.toggle('hidden');
+    // Close other dropdown
+    if (!expanded) {
+      aboutDropdown.classList.add('hidden');
+      aboutToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!aboutToggle.contains(e.target) && !aboutDropdown.contains(e.target)) {
+      aboutDropdown.classList.add('hidden');
+      aboutToggle.setAttribute('aria-expanded', 'false');
+    }
+    if (!servicesToggle.contains(e.target) && !servicesDropdown.contains(e.target)) {
+      servicesDropdown.classList.add('hidden');
+      servicesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuButton.addEventListener('click', function () {
+    mobileMenu.classList.toggle('hidden');
+    // Toggle icon
+    const icon = mobileMenuButton.querySelector('i');
+    if (mobileMenu.classList.contains('hidden')) {
+      icon.className = 'ri-menu-line ri-lg';
+    } else {
+      icon.className = 'ri-close-line ri-lg';
+    }
+  });
+
+  // Mobile dropdown toggles
+  const mobileAboutToggle = document.getElementById('mobile-about-toggle');
+  const mobileAboutDropdown = document.getElementById('mobile-about-dropdown');
+  const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+  const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+
+  mobileAboutToggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    mobileAboutDropdown.classList.toggle('hidden');
+    // Close other dropdown
+    if (!expanded) {
+      mobileServicesDropdown.classList.add('hidden');
+      mobileServicesToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  mobileServicesToggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    mobileServicesDropdown.classList.toggle('hidden');
+    // Close other dropdown
+    if (!expanded) {
+      mobileAboutDropdown.classList.add('hidden');
+      mobileAboutToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 });
 </script>
 <script id="faq-script">
 document.addEventListener('DOMContentLoaded', function() {
-const faqButtons = document.querySelectorAll('.faq-button');
-faqButtons.forEach(button => {
-button.addEventListener('click', function() {
-const answer = this.nextElementSibling;
-const icon = this.querySelector('i');
-// Toggle answer visibility
-answer.classList.toggle('hidden');
-// Toggle icon rotation
-if (answer.classList.contains('hidden')) {
-icon.style.transform = 'rotate(0deg)';
-} else {
-icon.style.transform = 'rotate(180deg)';
-}
-});
-});
+  const faqButtons = document.querySelectorAll('.faq-button');
+  faqButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const answer = this.nextElementSibling;
+      const icon = this.querySelector('i');
+      // Toggle answer visibility
+      answer.classList.toggle('hidden');
+      // Toggle icon rotation
+      if (answer.classList.contains('hidden')) {
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
 });
 </script>
 </body>
